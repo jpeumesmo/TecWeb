@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Champions Linux</title>
+<link rel="icon" href="images/pinguim.jpg" type="image/x-icon">
+
+<!-- CSS E THEMES -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+<link rel="stylesheet" href="css/design.css">
+
+
+<!-- SCRIPST -->
+<script src="js/jquery-3.2.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+
+</head>
+
+<body>
+	<div class="login-page">
+		<div class="container">
+
+			<!-- LOGIN  -->
+			<nav class="navbar navbar-default navbar-light" role="navigation">
+				<div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<a class="navbar-brand">Champions Linux # Edição</a>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse"
+						id="bs-example-navbar-collapse-1">
+
+						<ul class="nav navbar-nav navbar-right">
+							<li class="dropdown"><a href="#" class="dropdown-toggle"
+								data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+								<ul id="login-dp" class="dropdown-menu">
+									<li>
+										<div class="row">
+											<div class="col-md-12">
+												<form class="form" role="form" method="post" action="login"
+													accept-charset="UTF-8" id="login-nav">
+													<div class="form-group">
+														<label class="sr-only" for="exampleInputEmail2">Email
+															address</label> <input type="email" class="form-control"
+															id="exampleInputEmail2" placeholder="Email" required>
+													</div>
+													<div class="form-group">
+														<label class="sr-only" for="exampleInputPassword2">Password</label>
+														<input type="password" class="form-control"
+															id="exampleInputPassword2" placeholder="Senha" required>
+													</div>
+													<div class="form-group">
+														<button type="submit" class="btn btn-primary btn-block">Entrar
+														</button>
+													</div>
+													<!-- 
+												<div class="checkbox">
+													<label> <input type="checkbox"> keep me
+														logged-in
+													</label>
+												</div>
+												 -->
+												</form>
+											</div>
+										</div>
+									</li>
+								</ul></li>
+						</ul>
+					</div>
+					<!-- /.navbar-collapse -->
+				</div>
+				<!-- /.container-fluid -->
+			</nav>
+			<!-- TABELAS -->
+
+			<!-- JOGOS -->
+
+			<div class="col-xs-4">
+				<h2 class="sub-header">Jogos</h2>
+				<div class="table-responsive">
+					<table class="table table-bordered">
+						<thead>
+							<tr>
+								<th>Time</th>
+								<th>Gols</th>
+								<th>vs</th>
+								<th>Gols</th>
+								<th>Time</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							<tr>
+								<td>Cutuca Pomba</td>
+								<td>5</td>
+								<td>vs</td>
+								<td>1</td>
+								<td>Bigode Grosso</td>
+							</tr>
+							<tr>
+								<td>Cutuca Pomba</td>
+								<td>_</td>
+								<td>vs</td>
+								<td>_</td>
+								<td>Bigode Grosso</td>
+							</tr>
+							<tr>
+								<td>Cutuca Pomba</td>
+								<td>_</td>
+								<td>vs</td>
+								<td>_</td>
+								<td>Bigode Grosso</td>
+							</tr>
+							<tr>
+								<td>Cutuca Pomba</td>
+								<td>_</td>
+								<td>vs</td>
+								<td>_</td>
+								<td>Bigode Grosso</td>
+							</tr>
+							<tr>
+								<td>Cutuca Pomba</td>
+								<td>_</td>
+								<td>vs</td>
+								<td>_</td>
+								<td>Bigode Grosso</td>
+							</tr>
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+
+			<!-- CLASIFICAÇAO -->
+			<div class="col-xs-4">
+				<h2 class="sub-header">Classificação</h2>
+				<div class="table-responsive">
+					<table class="table table-bordered">
+						<thead>
+							<!-- table head-->
+							<tr>
+								<th>Posição</th>
+								<th>Time</th>
+								<th>Gols Pró</th>
+								<th>Gols Contra</th>
+								<th>Saldo de Gol</th>
+								<th>Pts</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							<tr class="success">
+								<!-- Row 1 , success class-->
+								<td>1</td>
+								<td>Cutuca Pomba</td>
+								<td>8</td>
+								<td>3</td>
+								<td>5</td>
+								<td>10</td>
+							</tr>
+							<tr class="success">
+								<!-- Row 1 , success class-->
+								<td>2</td>
+								<td>Cutuca Pomba</td>
+								<td>8</td>
+								<td>3</td>
+								<td>5</td>
+								<td>10</td>
+							</tr>
+							<tr class="success">
+								<!-- Row 1 , success class-->
+								<td>3</td>
+								<td>Cutuca Pomba</td>
+								<td>8</td>
+								<td>3</td>
+								<td>5</td>
+								<td>10</td>
+							</tr>
+							<tr class="success">
+								<!-- Row 1 , success class-->
+								<td>4</td>
+								<td>Cutuca Pomba</td>
+								<td>8</td>
+								<td>3</td>
+								<td>5</td>
+								<td>10</td>
+							</tr>
+							<tr>
+								<!-- Row 1 , success class-->
+								<td>5</td>
+								<td>Cutuca Pomba</td>
+								<td>8</td>
+								<td>3</td>
+								<td>5</td>
+								<td>10</td>
+							</tr>
+							<tr>
+								<!-- Row 1 , success class-->
+								<td>6</td>
+								<td>Cutuca Pomba</td>
+								<td>8</td>
+								<td>3</td>
+								<td>5</td>
+								<td>10</td>
+							</tr>
+							<tr>
+								<!-- Row 1 , success class-->
+								<td>7</td>
+								<td>Cutuca Pomba</td>
+								<td>8</td>
+								<td>3</td>
+								<td>5</td>
+								<td>10</td>
+							</tr>
+							<tr>
+								<!-- Row 1 , success class-->
+								<td>8</td>
+								<td>Cutuca Pomba</td>
+								<td>8</td>
+								<td>3</td>
+								<td>5</td>
+								<td>10</td>
+							</tr>
+							<tr class="danger">
+								<!-- Row 1 , success class-->
+								<td>9</td>
+								<td>Cutuca Pomba</td>
+								<td>8</td>
+								<td>3</td>
+								<td>5</td>
+								<td>10</td>
+							</tr>
+							<tr class="danger">
+								<!-- Row 1 , success class-->
+								<td>10</td>
+								<td>Bigode Grosso</td>
+								<td>8</td>
+								<td>3</td>
+								<td>5</td>
+								<td>10</td>
+							</tr>
+
+
+						</tbody>
+					</table>
+				</div>
+
+			</div>
+
+
+			<!-- ARTILHARIA -->
+			<div class="col-xs-4">
+				<h2 class="sub-header">Artilharia</h2>
+				<div class="table-responsive">
+					<table class="table table-bordered">
+						<thead>
+							<tr>
+								<th>Jogador</th>
+								<th>Time</th>
+								<th>Gols</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							<tr class="sucess">
+								<td>João</td>
+								<td>Vice Game</td>
+								<td>15</td>
+							</tr>
+							<tr>
+								<td>asdasdad</td>
+								<td>Cutuca Pomba</td>
+								<td>12</td>
+							</tr>
+							<tr>
+								<td>asdasdad</td>
+								<td>Cutuca Pomba</td>
+								<td>12</td>
+							</tr>
+							<tr>
+								<td>asdasdad</td>
+								<td>Cutuca Pomba</td>
+								<td>12</td>
+							</tr>
+							<tr>
+								<td>asdasdad</td>
+								<td>Cutuca Pomba</td>
+								<td>12</td>
+							</tr>
+							<tr>
+								<td>asdasdad</td>
+								<td>Cutuca Pomba</td>
+								<td>12</td>
+							</tr>
+							<tr>
+								<td>asdasdad</td>
+								<td>Cutuca Pomba</td>
+								<td>12</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+
+
+
+		</div>
+	</div>
+</body>
+
+</html>

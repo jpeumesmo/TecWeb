@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;Champions Linux&apos; to &apos;Championsinux&apos;" description="Rename resource &apos;Champions Linux&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/Champions Linux" name="Championsinux" stamp="1491402028985" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;Championsinux&apos; to &apos;ChampionsLinux&apos;" description="Rename resource &apos;Championsinux&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/Championsinux" name="ChampionsLinux" stamp="1491402037984" updateReferences="true"/>
+</session>

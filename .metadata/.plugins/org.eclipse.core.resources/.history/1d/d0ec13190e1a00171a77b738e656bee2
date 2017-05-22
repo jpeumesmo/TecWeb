@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!-- CSS E THEMES -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+<!-- SCRIPST -->
+<script type="js/jquery-3.2.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<h1>sasdas</h1>
+
+<input type = "email"></input>
+</body>
+
+</html>

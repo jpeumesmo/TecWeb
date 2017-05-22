@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="icon" href="images/pinguim.jpg" type="image/x-icon">
+
+<!-- CSS E THEMES -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+<!-- SCRIPST -->
+<script type="js/jquery-3.2.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script id = droplogin>
+
+</head>
+
+<body>
+
+	<div class="container">
+	 <ul class="nav pull-right">
+     <li><a href="/users/sign_up">Sign Up</a></li>
+     <li class="divider-vertical"></li>
+     <li class="dropdown">
+       <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
+       <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+         <!-- Login form here -->
+       </div>
+     </li>
+   </ul>
+	</div>
+</body>
+
+</html>
