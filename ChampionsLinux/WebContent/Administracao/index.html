@@ -135,7 +135,7 @@
 								class="fa fa-angle-left pull-right"></i>
 						</span>
 					</a>
-						<ul class="treeview-menu">
+						<ul id="treeview_opcoes" class="treeview-menu">
 							<li><a href="#" id="menu_equipes_0"><i
 									class="fa fa-circle-o"></i> Bigode Grosso</a></li>
 							<li class="active"><a href="#" id="menu_equipes_1"><i
@@ -566,332 +566,339 @@
 
 
 		<section id="pop_up_change_game">
-			<div class="modal fade" id="modalChangeGame" tabindex="-1"
-				role="dialog" aria-labelledby="myModalLabel">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal"
-								aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-							<h4 class="modal-title" id="myModalLabel">Modificar Jogo</h4>
-						</div>
-						<div class="modal-body">
-							<form>
-								<div class="form-group">
-									<label for="sel1"></label> <select class="form-control"
-										id="sel1">
-										<option value="null">Escolha o primeiro time</option>
-										<option value="bigode">Bigode Grosso</option>
-										<option value="calouros">Calouros</option>
-										<option value="cutuca">Cutuca Pomba</option>
-										<option value="hora_extra">Hora Extra</option>
-									</select> <br> <a>Vs</a> <br> <label for="sel1"></label> <select
-										class="form-control" id="sel1">
-										<option value="null">Escolha o segundo time</option>
-										<option value="bigode">Bigode Grosso</option>
-										<option value="calouros">Calouros</option>
-										<option value="cutuca">Cutuca Pomba</option>
-										<option value="hora_extra">Hora Extra</option>
-									</select>
-								</div>
-							</form>
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-							<button type="button" class="btn btn-primary"
-								data-dismiss="modal" href="#" id="add_game" data-toggle="modal"
-								data-target="#modalSumula">Súmula</button>
-							<button type="button" class="btn btn-success">Salvar</button>
-						</div>
-					</div>
-				</div>
-			</div>
-
-
-		</section>
-
-
-		<section id="pop_up_sumula">
-			<div class="modal fade" id="modalSumula" tabindex="-1" role="dialog"
-				aria-labelledby="myModalLabel">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal"
-								aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-							<h4 class="modal-title" id="myModalLabel">
-								Súmula <small>Time 1</small>
-							</h4>
-						</div>
-						<div class="modal-body">
-							<form>
-								<div class="form-group">
-									<table class="table table-bordered">
-										<thead>
-											<tr>
-												<th>Jogadores</th>
-												<th>Gols</th>
-												<th>Faltas</th>
-												<th><img src="../img/amarelo.png" alt="" border=3
-													height=15 width=10></img></th>
-												<th><img src="../img/vermelho.png" alt="" border=3
-													height=15 width=10></img></th>
-											</tr>
-										</thead>
-
-										<tbody>
-											<tr>
-												<td>Jogador 1</td>
-												<td><input type="number" min="0" max="99"
-													class="form-control form-white" placeholder="Gols"></td>
-												<td><input type="number" min="0" max="99"
-													class="form-control form-white" placeholder="Faltas"></td>
-
-												<td><label><input type="radio" name="optradio">1</label>
-													<label><input type="radio" name="optradio">2</label>
-												</td>
-												<td><label><input type="radio" name="optradio1">
-												</label></td>
-
-											</tr>
-
-											<tr>
-												<td>Jogador 2</td>
-												<td><input type="number" min="0" max="99"
-													class="form-control form-white" placeholder="Gols"></td>
-												<td><input type="number" min="0" max="99"
-													class="form-control form-white" placeholder="Faltas"></td>
-
-												<td><label><input type="radio" name="optradio">1</label>
-													<label><input type="radio" name="optradio">2</label>
-												</td>
-												<td><label><input type="radio" name="optradio1">
-												</label></td>
-
-											</tr>
-
-											<tr>
-												<td>Jogador 3</td>
-												<td><input type="number" min="0" max="99"
-													class="form-control form-white" placeholder="Gols"></td>
-												<td><input type="number" min="0" max="99"
-													class="form-control form-white" placeholder="Faltas"></td>
-
-												<td><label><input type="radio" name="optradio">1</label>
-													<label><input type="radio" name="optradio">2</label>
-												</td>
-												<td><label><input type="radio" name="optradio1">
-												</label></td>
-
-
-											</tr>
-
-											<tr>
-												<td>Jogador 4</td>
-												<td><input type="number" min="0" max="99"
-													class="form-control form-white" placeholder="Gols"></td>
-												<td><input type="number" min="0" max="99"
-													class="form-control form-white" placeholder="Faltas"></td>
-
-												<td><label><input type="radio" name="optradio">1</label>
-													<label><input type="radio" name="optradio">2</label>
-												</td>
-												<td><label><input type="radio" name="optradio1">
-												</label></td>
-
-
-											</tr>
-
-											<tr>
-												<td>Jogador 5</td>
-												<td><input type="number" min="0" max="99"
-													class="form-control form-white" placeholder="Gols"></td>
-												<td><input type="number" min="0" max="99"
-													class="form-control form-white" placeholder="Faltas"></td>
-
-												<td><label><input type="radio" name="optradio">1</label>
-													<label><input type="radio" name="optradio">2</label>
-												</td>
-												<td><label><input type="radio" name="optradio1">
-												</label></td>
-
-											</tr>
-
-											<tr>
-												<td>Jogador 6</td>
-												<td><input type="number" min="0" max="99"
-													class="form-control form-white" placeholder="Gols"></td>
-												<td><input type="number" min="0" max="99"
-													class="form-control form-white" placeholder="Faltas"></td>
-
-												<td><label><input type="radio" name="optradio">1</label>
-													<label><input type="radio" name="optradio">2</label>
-												</td>
-												<td><label><input type="radio" name="optradio1">
-												</label></td>
-
-											</tr>
-										</tbody>
-
-									</table>
-								</div>
-							</form>
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-default"
-								data-dismiss="modal">Cancelar</button>
-							<button type="button" class="btn btn-primary"
-								data-dismiss="modal" href="#" id="add_game" data-toggle="modal"
-								data-target="#modalSumula1">Próximo Time</button>
+			<div id="modal_change_game">
+				<div class="modal fade" id="modalChangeGame" tabindex="-1"
+					role="dialog" aria-labelledby="myModalLabel">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal"
+									aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+								<h4 class="modal-title" id="myModalLabel">Modificar Jogo</h4>
+							</div>
+							<div class="modal-body">
+								<form>
+									<div class="form-group">
+										<label for="sel1"></label> <select class="form-control"
+											id="sel1">
+											<option value="null">Escolha o primeiro time</option>
+											<option value="bigode">Bigode Grosso</option>
+											<option value="calouros">Calouros</option>
+											<option value="cutuca">Cutuca Pomba</option>
+											<option value="hora_extra">Hora Extra</option>
+										</select> <br> <a>Vs</a> <br> <label for="sel1"></label> <select
+											class="form-control" id="sel1">
+											<option value="null">Escolha o segundo time</option>
+											<option value="bigode">Bigode Grosso</option>
+											<option value="calouros">Calouros</option>
+											<option value="cutuca">Cutuca Pomba</option>
+											<option value="hora_extra">Hora Extra</option>
+										</select>
+									</div>
+								</form>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-danger"
+									data-dismiss="modal">Cancelar</button>
+								<button type="button" class="btn btn-primary"
+									data-dismiss="modal" href="#" id="add_game" data-toggle="modal"
+									data-target="#modalSumula">Súmula</button>
+								<button type="button" class="btn btn-success">Salvar</button>
+							</div>
 						</div>
 					</div>
 				</div>
+
 			</div>
 
 
-		</section>
+			<div id="modal_sumula">
+				<div class="modal fade" id="modalSumula" tabindex="-1" role="dialog"
+					aria-labelledby="myModalLabel">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal"
+									aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+								<h4 class="modal-title" id="myModalLabel">
+									Súmula <small>Time 1</small>
+								</h4>
+							</div>
+							<div class="modal-body">
+								<form id="sumula">
+									<div class="form-group">
+										<table class="table table-bordered">
+											<thead>
+												<tr>
+													<th>Jogadores</th>
+													<th>Gols</th>
+													<th>Faltas</th>
+													<th><img src="../img/amarelo.png" alt="" border=3
+														height=15 width=10></img></th>
+													<th><img src="../img/vermelho.png" alt="" border=3
+														height=15 width=10></img></th>
+												</tr>
+											</thead>
 
-		<section id="pop_up_sumula_1">
-			<div class="modal fade" id="modalSumula1" tabindex="-1" role="dialog"
-				aria-labelledby="myModalLabel">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal"
-								aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-							<h4 class="modal-title" id="myModalLabel">
-								Súmula <small> Time 2</small>
-							</h4>
-						</div>
-						<div class="modal-body">
-							<form>
-								<div class="form-group">
-									<table class="table table-bordered">
-										<thead>
-											<tr>
-												<th>Jogadores</th>
-												<th>Gols</th>
-												<th>Faltas</th>
-												<th><img src="../img/amarelo.png" alt="" border=3
-													height=15 width=10></img></th>
-												<th><img src="../img/vermelho.png" alt="" border=3
-													height=15 width=10></img></th>
-											</tr>
-										</thead>
+											<tbody>
+												<tr>
+													<td>Jogador 1</td>
+													<td><input type="number" min="0" max="99"
+														class="form-control form-white" placeholder="Gols"></td>
+													<td><input type="number" min="0" max="99"
+														class="form-control form-white" placeholder="Faltas"></td>
 
-										<tbody>
-											<tr>
-												<td>Jogador 1</td>
-												<td><input type="number" min="0" max="99"
-													class="form-control form-white" placeholder="Gols"></td>
-												<td><input type="number" min="0" max="99"
-													class="form-control form-white" placeholder="Faltas"></td>
+													<td><label><input type="radio" name="optradio"
+															value="1">1</label> <label><input type="radio"
+															name="optradio" value="2">2</label></td>
+													<td><label><input id="chk" type="checkbox">
+													</label></td>
 
-												<td><label><input type="radio" name="optradio">1</label>
-													<label><input type="radio" name="optradio">2</label>
-												</td>
-												<td><label><input type="radio" name="optradio1">
-												</label></td>
+												</tr>
 
-
-											</tr>
-
-											<tr>
-												<td>Jogador 2</td>
-												<td><input type="number" min="0" max="99"
-													class="form-control form-white" placeholder="Gols"></td>
-												<td><input type="number" min="0" max="99"
-													class="form-control form-white" placeholder="Faltas"></td>
-
-												<td><label><input type="radio" name="optradio">1</label>
-													<label><input type="radio" name="optradio">2</label>
-												</td>
-												<td><label><input type="radio" name="optradio1">
-												</label></td>
-
-											</tr>
-
-											<tr>
-												<td>Jogador 3</td>
-												<td><input type="number" min="0" max="99"
-													class="form-control form-white" placeholder="Gols"></td>
-												<td><input type="number" min="0" max="99"
-													class="form-control form-white" placeholder="Faltas"></td>
-												<td><label><input type="radio" name="optradio"
-														disabled>1</label> <label><input type="radio"
-														name="optradio">2</label></td>
-												<td><label><input type="radio" name="optradio1">
-												</label></td>
+												<tr>
+													<td>Jogador 2</td>
+													<td><input type="number" min="0" max="99"
+														class="form-control form-white" placeholder="Gols"></td>
+													<td><input type="number" min="0" max="99"
+														class="form-control form-white" placeholder="Faltas"></td>
 
 
-											</tr>
+													<td><label><input type="radio"
+															name="optradio1" value="1">1</label> <label><input
+															type="radio" name="optradio1" value="2">2</label></td>
+													<td><label><input id="chk_1" type="checkbox">
+													</label></td>
 
-											<tr>
-												<td>Jogador 4</td>
-												<td><input type="number" min="0" max="99"
-													class="form-control form-white" placeholder="Gols"></td>
-												<td><input type="number" min="0" max="99"
-													class="form-control form-white" placeholder="Faltas"></td>
+												</tr>
 
-												<td><label><input type="radio" name="optradio">1</label>
-													<label><input type="radio" name="optradio">2</label>
-												</td>
-												<td><label><input type="radio" name="optradio1">
-												</label></td>
+												<tr>
+													<td>Jogador 3</td>
+													<td><input type="number" min="0" max="99"
+														class="form-control form-white" placeholder="Gols"></td>
+													<td><input type="number" min="0" max="99"
+														class="form-control form-white" placeholder="Faltas"></td>
 
-											</tr>
+													<
+													<td><label><input type="radio"
+															name="optradio2" value="1">1</label> <label><input
+															type="radio" name="optradio2" value="2">2</label></td>
+													<td><label><input id="chk_2" type="checkbox">
+													</label></td>
 
-											<tr>
-												<td>Jogador 5</td>
-												<td><input type="number" min="0" max="99"
-													class="form-control form-white" placeholder="Gols"></td>
-												<td><input type="number" min="0" max="99"
-													class="form-control form-white" placeholder="Faltas"></td>
 
-												<td><label><input type="radio" name="optradio">1</label>
-													<label><input type="radio" name="optradio">2</label>
-												</td>
-												<td><label><input type="radio" name="optradio1">
-												</label></td>
+												</tr>
 
-											</tr>
+												<tr>
+													<td>Jogador 4</td>
+													<td><input type="number" min="0" max="99"
+														class="form-control form-white" placeholder="Gols"></td>
+													<td><input type="number" min="0" max="99"
+														class="form-control form-white" placeholder="Faltas"></td>
 
-											<tr>
-												<td>Jogador 6</td>
-												<td><input type="number" min="0" max="99"
-													class="form-control form-white" placeholder="Gols"></td>
-												<td><input type="number" min="0" max="99"
-													class="form-control form-white" placeholder="Faltas"></td>
+													<td><label><input type="radio"
+															name="optradio3" value="1">1</label> <label><input
+															type="radio" name="optradio3" value="2">2</label></td>
+													<td><label><input id="chk_3" type="checkbox">
+													</label></td>
 
-												<td><label><input type="radio" name="optradio">1</label>
-													<label><input type="radio" name="optradio">2</label>
-												</td>
-												<td><label><input type="radio" name="optradio1">
-												</label></td>
 
-											</tr>
-										</tbody>
+												</tr>
 
-									</table>
-								</div>
-							</form>
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-default"
-								data-dismiss="modal">Cancelar</button>
-							<button type="button" class="btn btn-primary">Salvar</button>
+												<tr>
+													<td>Jogador 5</td>
+													<td><input type="number" min="0" max="99"
+														class="form-control form-white" placeholder="Gols"></td>
+													<td><input type="number" min="0" max="99"
+														class="form-control form-white" placeholder="Faltas"></td>
+
+													<td><label><input type="radio"
+															name="optradio4" value="1">1</label> <label><input
+															type="radio" name="optradio4" value="2">2</label></td>
+													<td><label><input id="chk_4" type="checkbox">
+													</label></td>
+
+												</tr>
+
+												<tr>
+													<td>Jogador 6</td>
+													<td><input type="number" min="0" max="99"
+														class="form-control form-white" placeholder="Gols"></td>
+													<td><input type="number" min="0" max="99"
+														class="form-control form-white" placeholder="Faltas"></td>
+
+													<td><label><input type="radio"
+															name="optradio5" value="1">1</label> <label><input
+															type="radio" name="optradio5" value="2">2</label></td>
+													<td><label><input id="chk_5" type="checkbox">
+													</label></td>
+
+												</tr>
+											</tbody>
+
+										</table>
+									</div>
+								</form>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default"
+									data-dismiss="modal">Cancelar</button>
+								<button type="button" class="btn btn-primary"
+									data-dismiss="modal" href="#" id="add_game" data-toggle="modal"
+									data-target="#modalSumula1">Próximo Time</button>
+							</div>
 						</div>
 					</div>
 				</div>
+
+
 			</div>
 
+			<div id="modal_sumula_1">
+				<div class="modal fade" id="modalSumula1" tabindex="-1"
+					role="dialog" aria-labelledby="myModalLabel">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal"
+									aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+								<h4 class="modal-title" id="myModalLabel">
+									Súmula <small> Time 2</small>
+								</h4>
+							</div>
+							<div class="modal-body">
+								<form id="sumula_1">
+									<div class="form-group">
+										<table class="table table-bordered">
+											<thead>
+												<tr>
+													<th>Jogadores</th>
+													<th>Gols</th>
+													<th>Faltas</th>
+													<th><img src="../img/amarelo.png" alt="" border=3
+														height=15 width=10></img></th>
+													<th><img src="../img/vermelho.png" alt="" border=3
+														height=15 width=10></img></th>
+												</tr>
+											</thead>
 
+											<tbody>
+												<tr>
+													<td>Jogador 1</td>
+													<td><input type="number" min="0" max="99"
+														class="form-control form-white" placeholder="Gols"></td>
+													<td><input type="number" min="0" max="99"
+														class="form-control form-white" placeholder="Faltas"></td>
+
+													<td><label><input type="radio" name="optradio"
+															value="1">1</label> <label><input type="radio"
+															name="optradio" value="2">2</label></td>
+													<td><label><input id="chk" type="checkbox">
+													</label></td>
+
+												</tr>
+
+												<tr>
+													<td>Jogador 2</td>
+													<td><input type="number" min="0" max="99"
+														class="form-control form-white" placeholder="Gols"></td>
+													<td><input type="number" min="0" max="99"
+														class="form-control form-white" placeholder="Faltas"></td>
+
+
+													<td><label><input type="radio"
+															name="optradio1" value="1">1</label> <label><input
+															type="radio" name="optradio1" value="2">2</label></td>
+													<td><label><input id="chk_1" type="checkbox">
+													</label></td>
+
+												</tr>
+
+												<tr>
+													<td>Jogador 3</td>
+													<td><input type="number" min="0" max="99"
+														class="form-control form-white" placeholder="Gols"></td>
+													<td><input type="number" min="0" max="99"
+														class="form-control form-white" placeholder="Faltas"></td>
+
+													<
+													<td><label><input type="radio"
+															name="optradio2" value="1">1</label> <label><input
+															type="radio" name="optradio2" value="2">2</label></td>
+													<td><label><input id="chk_2" type="checkbox">
+													</label></td>
+
+
+												</tr>
+
+												<tr>
+													<td>Jogador 4</td>
+													<td><input type="number" min="0" max="99"
+														class="form-control form-white" placeholder="Gols"></td>
+													<td><input type="number" min="0" max="99"
+														class="form-control form-white" placeholder="Faltas"></td>
+
+													<td><label><input type="radio"
+															name="optradio3" value="1">1</label> <label><input
+															type="radio" name="optradio3" value="2">2</label></td>
+													<td><label><input id="chk_3" type="checkbox">
+													</label></td>
+
+
+												</tr>
+
+												<tr>
+													<td>Jogador 5</td>
+													<td><input type="number" min="0" max="99"
+														class="form-control form-white" placeholder="Gols"></td>
+													<td><input type="number" min="0" max="99"
+														class="form-control form-white" placeholder="Faltas"></td>
+
+													<td><label><input type="radio"
+															name="optradio4" value="1">1</label> <label><input
+															type="radio" name="optradio4" value="2">2</label></td>
+													<td><label><input id="chk_4" type="checkbox">
+													</label></td>
+
+												</tr>
+
+												<tr>
+													<td>Jogador 6</td>
+													<td><input type="number" min="0" max="99"
+														class="form-control form-white" placeholder="Gols"></td>
+													<td><input type="number" min="0" max="99"
+														class="form-control form-white" placeholder="Faltas"></td>
+
+													<td><label><input type="radio"
+															name="optradio5" value="1">1</label> <label><input
+															type="radio" name="optradio5" value="2">2</label></td>
+													<td><label><input id="chk_5" type="checkbox">
+													</label></td>
+
+												</tr>
+											</tbody>
+
+										</table>
+									</div>
+								</form>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default"
+									data-dismiss="modal">Cancelar</button>
+								<button type="button" class="btn btn-primary">Salvar</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
 		</section>
 
 		<section id="pop_up_add_team">
@@ -907,12 +914,12 @@
 							<h4 class="modal-title" id="myModalLabel">Adicionar Time</h4>
 						</div>
 						<div class="modal-body">
-							<input class="form-control form-white" placeholder="Nome do time">
+							<input id = "name_new_team" class="form-control form-white" placeholder="Nome do time">
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-default"
 								data-dismiss="modal">Cancelar</button>
-							<button type="button" class="btn btn-primary">Salvar</button>
+							<button id="btn_add_team" type="button" class="btn btn-primary">Salvar</button>
 						</div>
 					</div>
 				</div>
@@ -1157,6 +1164,7 @@
 	<!-- jQuery UI 1.11.4 -->
 	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 
+
 	<script>
 										
 		$(document).ready(function() {
@@ -1174,7 +1182,15 @@
 				$("#jogos").hide();
 				$("#equipes").hide();
 			});
-			$("#menu_equipes_0").on("click", function(e) {
+	
+			
+			$('[id^="menu_equipes"]').on("click", function(e) {
+				$("#control").hide();
+				$("#jogos").hide();
+				$("#equipes").show();
+			});
+			
+	/*		$("#menu_equipes_0").on("click", function(e) {
 				$("#control").hide();
 				$("#jogos").hide();
 				$("#equipes").show();
@@ -1194,12 +1210,56 @@
 				$("#jogos").hide();
 				$("#equipes").show();
 			});
+		*/	
 			$("#add_team").on("click", function(e) {
 				$("#control").show();
 				$("#jogos").hide();
 				$("#equipes").hide();
 			});
 
+			$("#btn_sumula").on("click", function(e){
+				$("#modal_change_game").hide();
+				$("modal_sumula").show();
+				$("modal_sumula_1").hide();
+				
+			});
+			
+			$("#btn_sumula_1").on("click", function(e){
+				$("#modal_change_game").hide();
+				$("modal_sumula").hide();
+				$("modal_sumula_1").show();
+
+			});		
+	
+			$("#btn_salve_change").on("click", function(e){
+				
+			});		
+	
+			
+			//PARA MARCAR O VERMELHO AUTOMATICO
+			$('#sumula input').on('change', function() {
+   				//alert($('input[name=optradio]:checked', '#sumula').val());
+   				if ($('input[name=optradio]:checked', '#sumula').val() == 2){
+   					$("#chk").prop("checked", true);
+   				}
+   				
+   				//if ($('#chk').prop("checked", true)){
+   					//if($('input[name=optradio]:checked', '#sumula').val() == 1){
+   						//$("#chk").prop("checked",false);	
+   					//}
+   				//}
+			});
+			
+			//PARA ADICIONAR TIME NA TABELA LATERAL 
+			
+			$("#btn_add_team").click(function(){
+				 var branches = $('<li class="active"><a href="#" id="menu_equipes_' +
+					$("#treeview_opcoes").children().length + '">' 
+					+' <i class="fa fa-circle-o"></i>'+ $("#name_new_team").val()+
+					'</a></li>').prependTo("#treeview_opcoes");
+			});
+			
+			
 		});
 	</script>
 
