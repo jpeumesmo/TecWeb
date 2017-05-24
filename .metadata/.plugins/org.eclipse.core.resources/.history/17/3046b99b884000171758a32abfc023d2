@@ -136,13 +136,13 @@
 						</span>
 					</a>
 						<ul id="treeview_opcoes" class="treeview-menu">
-							<li><a href="#" id_equipe="0"><i
+							<li><a href="#" id="menu_equipes_0"><i
 									class="fa fa-circle-o"></i> Bigode Grosso</a></li>
-							<li class="active"><a href="#" id_equipe="1"><i
+							<li class="active"><a href="#" id="menu_equipes_1"><i
 									class="fa fa-circle-o"></i> Calouros</a></li>
-							<li class="active"><a href="#" id_equipe="2"><i
+							<li class="active"><a href="#" id="menu_equipes_2"><i
 									class="fa fa-circle-o"></i> Hora Extra</a></li>
-							<li class="active"><a href="#" id_equipe="3"><i
+							<li class="active"><a href="#" id="menu_equipes_3"><i
 									class="fa fa-circle-o"></i> Cutuca Pomba</a></li>
 							<li class="active"><a href="#" id="add_team"
 								data-toggle="modal" data-target="#modalAddTeam"><i
@@ -605,7 +605,7 @@
 								<button type="button" class="btn btn-primary"
 									data-dismiss="modal" href="#" id="add_game" data-toggle="modal"
 									data-target="#modalSumula">Súmula</button>
-								<button type="button" class="btn btn-success" data-dismiss="modal">Salvar</button>
+								<button type="button" class="btn btn-success">Salvar</button>
 							</div>
 						</div>
 					</div>
@@ -891,7 +891,7 @@
 							<div class="modal-footer">
 								<button type="button" class="btn btn-default"
 									data-dismiss="modal">Cancelar</button>
-								<button type="button" class="btn btn-primary"data-dismiss="modal">Salvar</button>
+								<button type="button" class="btn btn-primary">Salvar</button>
 							</div>
 						</div>
 					</div>
@@ -919,7 +919,7 @@
 						<div class="modal-footer">
 							<button type="button" class="btn btn-default"
 								data-dismiss="modal">Cancelar</button>
-							<button id="btn_add_team" type="button" class="btn btn-primary"data-dismiss="modal" >Salvar</button>
+							<button id="btn_add_team" type="button" class="btn btn-primary">Salvar</button>
 						</div>
 					</div>
 				</div>
@@ -1182,12 +1182,12 @@
 				$("#jogos").hide();
 				$("#equipes").hide();
 			});
+	
 			
-//			('[id^="menu_equipes"]')
-			$("#treeview_opcoes").on("click", "a[id_equipe]", function(e) {
+			$('[id^="menu_equipes"]').on("click", function(e) {
 				$("#control").hide();
 				$("#jogos").hide();
-				$("#equipes").show();	
+				$("#equipes").show();
 			});
 			
 	/*		$("#menu_equipes_0").on("click", function(e) {
@@ -1217,7 +1217,7 @@
 				$("#equipes").hide();
 			});
 
-/*			$("#btn_sumula").on("click", function(e){
+			$("#btn_sumula").on("click", function(e){
 				$("#modal_change_game").hide();
 				$("modal_sumula").show();
 				$("modal_sumula_1").hide();
@@ -1235,14 +1235,14 @@
 				
 			});		
 	
-	*/		
+			
 			//PARA MARCAR O VERMELHO AUTOMATICO
 			$('#sumula input').on('change', function() {
    				//alert($('input[name=optradio]:checked', '#sumula').val());
    				if ($('input:checked', '#sumula').val() == 2){
-   					$(":checkbox", $(this).parents("tr")).prop("checked", true);
+   					$($(this).parents("tr"),":checkbox").prop("checked", true);
    				}
- 				
+   				
    				//if ($('#chk').prop("checked", true)){
    					//if($('input[name=optradio]:checked', '#sumula').val() == 1){
    						//$("#chk").prop("checked",false);	
@@ -1250,20 +1250,14 @@
    				//}
 			});
 			
-			$('#sumula_1 input').on('change', function() {
-			//alert($('input[name=optradio]:checked', '#sumula').val());
-			if ($('input:checked', '#sumula_1').val() == 2){
-				$(":checkbox", $(this).parents("tr")).prop("checked", true);
-			}
-
-			});
 			//PARA ADICIONAR TIME NA TABELA LATERAL 
 			
 			$("#btn_add_team").click(function(){
-				 var branches = $('<li><a href="#" id_equipe=' +
+				 var branches = $('<li"><a href="#" id="menu_equipes_' +
 					$("#treeview_opcoes").children().length + '">' 
 					+' <i class="fa fa-circle-o"></i>'+ $("#name_new_team").val()+
 					'</a></li>').prependTo("#treeview_opcoes");
+					teste();
 			});
 			
 			
@@ -1272,7 +1266,7 @@
 
 
 	<script>
-		function teste(){			
+		function teste(){
 			$('[id^="menu_equipes"]').on("click", function(e) {
 				$("#control").hide();
 				$("#jogos").hide();

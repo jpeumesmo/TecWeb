@@ -136,7 +136,7 @@
 						</span>
 					</a>
 						<ul id="treeview_opcoes" class="treeview-menu">
-							<li><a href="#" id_equipe="0"><i
+							<li><a href="#" id="menu_equipes_0"><i
 									class="fa fa-circle-o"></i> Bigode Grosso</a></li>
 							<li class="active"><a href="#" id_equipe="1"><i
 									class="fa fa-circle-o"></i> Calouros</a></li>
