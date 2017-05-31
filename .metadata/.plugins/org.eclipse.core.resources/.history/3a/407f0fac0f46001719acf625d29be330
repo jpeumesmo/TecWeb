@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<input id = "txt"type="text">
+	<input id="btn" type="button" value="enviar">
+
+	<h3></h3>
+
+</body>
+
+<script src="js/jquery-3.2.0.min.js"></script>
+
+<script>
+$("#btn").on("click",function(){
+	
+	var conteudo = $("#txt").val();
+	
+	$.ajax({
+		method: "POST",
+		url: "http://localhost:8080/ChampionsLinux/rest/hello/adiconar" + conteudo
+	}).done(function(msg){
+		$("h3").text(msg);	
+	});
+});
+</script>
+</html>

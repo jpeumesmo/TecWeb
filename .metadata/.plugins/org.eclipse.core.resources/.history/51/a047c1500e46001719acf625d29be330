@@ -1,0 +1,27 @@
+package br.edu.ufsj.ccomp.tecweb.services;
+
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+@Path("/hello")
+public class Hello {
+
+	@GET
+	@Path("/text/plain/{nome}")
+	@Produces(MediaType.TEXT_PLAIN)
+	public String sayTextPlainHello(@PathParam("nome") String nome){
+		return "Hello TecWeb - " + nome;
+	}
+	
+	@GET
+	@Path("/html")
+	@Produces(MediaType.TEXT_HTML)
+	public String sayHtmlHello(){
+		return "<html> " + "<title>" + "Hello Jersey" +" </title>"
+                + "<body><h1>" + "Hello Tecweb" + "</body></h1>" + "</html>" ;
+	}
+}

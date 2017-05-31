@@ -1,0 +1,14 @@
+package br.edu.ufsj.ccomp.tecweb.services;
+
+import java.awt.PageAttributes.MediaType;
+
+@Path("/hello")
+public class Hello {
+
+	@GET
+	@Path("/text/plain")
+	@Produces(MediaType.TEXT_PLAIN)
+	public String sayTextPlainHello(){
+		return "Hello TecWeb";
+	}
+}
