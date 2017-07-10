@@ -1,6 +1,0 @@
-package br.edu.ufsj.ccomp.tecweb.services;
-
-@Path("/hello")
-public class Hello {
-
-}

@@ -6,10 +6,11 @@
 </head>
 <body>
 
-	<input id = "txt"type="text">
+	<input id="txt_conteudo" type="text" placeholder="nome">
+	<input id="endereco" type="text" placeholder="endereço">
 	<input id="btn" type="button" value="enviar">
 
-	<h3></h3>
+	<ul></ul>
 
 </body>
 
@@ -18,20 +19,21 @@
 <script>
 $("#btn").on("click",function(){
 	
-	var conteudo = $("#txt").val();
+	var conteudo = $("#txt_conteudo").val();
+	var end = $("#endereco").val();
 	
 	$.ajax({
 		method: "POST",
-		url: "http://localhost:8080/ChampionsLinux/rest/hello/adiconar",
-		data:{nome: conteudo},
+		url: "http://localhost:8080/ChampionsLinux/rest/hello/adicionar",
+		data:JSON.stringify({nome: conteudo, endereco: end}),
 		dataType: "json",
 		contentType: "application/json"
 	}).done(function(usuarios){
-		$.each(usuarios, funciton(teste,usuario){
-			var li = $("li").text(usuario.nome);
+		$("ul").empty();
+		$.each(usuarios, function(teste,usuario){
+			var li = $("<li>").text(usuario.nome+" "+usuario.endereco);
 			$("ul").append(li);
 		})
-		$("h3").text(msg);	
 	});
 });
 </script>

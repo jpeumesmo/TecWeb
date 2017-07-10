@@ -1,0 +1,64 @@
+package champions.linux.services.entities;
+
+import java.util.ArrayList;
+
+public class Time {
+
+	//ATRIBUTOS
+	private ArrayList<Jogador> jogadores;
+	private String nome;
+	private int pontos;
+	private int golsPro;
+	private int golsContra;
+	private int id;
+	
+	//METODOS
+	public Time (String nome, int id){
+		this.nome = nome;
+		this.id = id;
+	}
+	
+	public Time() {
+		
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public ArrayList<Jogador> getJogadores() {
+		return jogadores;
+	}
+	public void setJogadores(ArrayList<Jogador> jogadores) {
+		this.jogadores = jogadores;
+	}
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public int getPontos() {
+		return pontos;
+	}
+	public void setPontos(int pontos) {
+		this.pontos = pontos;
+	}
+	public int getGolsPro() {
+		return golsPro;
+	}
+	public void setGolsPro(int golsPro) {
+		this.golsPro = golsPro;
+	}
+	public int getGolsContra() {
+		return golsContra;
+	}
+	public void setGolsContra(int golsContra) {
+		this.golsContra = golsContra;
+	}
+	
+}

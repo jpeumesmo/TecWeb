@@ -101,7 +101,7 @@
 								<!-- Menu Footer-->
 								<li class="user-footer">
 									<div class="pull-left">
-										<a href="#" class="btn btn-default btn-flat">Perfil</a>
+										<a id="btn_teste" href="#" class="btn btn-default btn-flat">Perfil</a>
 									</div>
 									<div class="pull-right">
 										<a href="#" class="btn btn-default btn-flat">Sair</a>
@@ -136,8 +136,8 @@
 						</span>
 					</a>
 						<ul id="treeview_opcoes" class="treeview-menu">
-							<li><a href="#" id_equipe="0"><i
-									class="fa fa-circle-o"></i> Bigode Grosso</a></li>
+							<li><a href="#" id_equipe="0"><i class="fa fa-circle-o"></i>
+									Bigode Grosso</a></li>
 							<li class="active"><a href="#" id_equipe="1"><i
 									class="fa fa-circle-o"></i> Calouros</a></li>
 							<li class="active"><a href="#" id_equipe="2"><i
@@ -605,7 +605,8 @@
 								<button type="button" class="btn btn-primary"
 									data-dismiss="modal" href="#" id="add_game" data-toggle="modal"
 									data-target="#modalSumula">Súmula</button>
-								<button type="button" class="btn btn-success" data-dismiss="modal">Salvar</button>
+								<button type="button" class="btn btn-success"
+									data-dismiss="modal">Salvar</button>
 							</div>
 						</div>
 					</div>
@@ -891,7 +892,8 @@
 							<div class="modal-footer">
 								<button type="button" class="btn btn-default"
 									data-dismiss="modal">Cancelar</button>
-								<button type="button" class="btn btn-primary"data-dismiss="modal">Salvar</button>
+								<button type="button" class="btn btn-primary"
+									data-dismiss="modal">Salvar</button>
 							</div>
 						</div>
 					</div>
@@ -914,12 +916,14 @@
 							<h4 class="modal-title" id="myModalLabel">Adicionar Time</h4>
 						</div>
 						<div class="modal-body">
-							<input id = "name_new_team" class="form-control form-white" placeholder="Nome do time">
+							<input id="name_new_team" class="form-control form-white"
+								placeholder="Nome do time">
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-default"
 								data-dismiss="modal">Cancelar</button>
-							<button id="btn_add_team" type="button" class="btn btn-primary"data-dismiss="modal" >Salvar</button>
+							<button id="btn_add_team" type="button" class="btn btn-primary"
+								data-dismiss="modal">Salvar</button>
 						</div>
 					</div>
 				</div>
@@ -1266,10 +1270,102 @@
 					'</a></li>').prependTo("#treeview_opcoes");
 			});
 			
-			
+
+			$.ajax({
+				method: "GET",
+				url: "http://localhost:8080/ChampionsLinux/rest/equipes/listar",
+				data: JSON.stringify(),
+				dataType: "json",
+				contentType: "application/json"
+			}).done(function(equipes){
+			//	<li><a href="#" id_equipe="0"><i
+			//	class="fa fa-circle-o"></i> Bigode Grosso</a></li>
+				$("#treeview_opcoes").empty();
+				$.each(equipes, function(idx, equipe){
+					var equipe_li = $('<li><a href='+'#'+' id_equipes='+idx+'><i class="fa fa-circle-o"></i>' + equipe.nome + "</a></li>");
+					$("#treeview_opcoes").append(equipe_li);
+				});
+				var add_li = $('<li><a href="#" id="add_team" data-toggle="modal" data-target="#modalAddTeam"><i class="fa fa-plus"></i> Adicionar Equipe</a></li>');
+				$("#treeview_opcoes").append(add_li);
+			});
+
 		});
 	</script>
 
+	<script>
+	$("#btn_add_team").on("click",function(){
+		var nomeTime = $("#name_new_team").val();
+		var size = $("#treeview_opcoes").children().size();
+		console.log(size);
+		$.ajax({
+			method: "POST",
+			url: "http://localhost:8080/ChampionsLinux/rest/equipes/adicionar",
+			data: JSON.stringify({nome: nomeTime,id: size}),
+			dataType: "json",
+			contentType: "application/json",
+			success: function (equipes) {
+				$("#treeview_opcoes").empty();
+				$.each(equipes, function(idx, equipe){
+					var equipe_li = $('<li><a href='+'#'+' id_equipes='+idx+'><i class="fa fa-circle-o"></i>' + equipe.nome + "</a></li>");
+					console.log(equipe_li.val());
+					$("#treeview_opcoes").append(equipe_li);
+				});
+				var add_li = $('<li><a href="#" id="add_team" data-toggle="modal" data-target="#modalAddTeam"><i class="fa fa-plus"></i> Adicionar Equipe</a></li>');
+				$("#treeview_opcoes").append(add_li);
+		    },
+			error: function (errormessage) {
+				console.log("erro");
+			}
+		})
+	});
+</script>
+
+	<script>
+$("#btn_teste").on("click",function(){
+	
+	
+	$.ajax({
+		method: "GET",
+		url: "http://localhost:8080/ChampionsLinux/rest/equipes/listar",
+		data: JSON.stringify(),
+		dataType: "json",
+		contentType: "application/json"
+	}).done(function(equipes){
+	//	<li><a href="#" id_equipe="0"><i
+	//	class="fa fa-circle-o"></i> Bigode Grosso</a></li>
+		$("#treeview_opcoes").empty();
+		$.each(equipes, function(idx, equipe){
+			var equipe_li = $('<li><a href='+'#'+' id_equipes='+idx+'><i class="fa fa-circle-o"></i>' + equipe.nome + "</a></li>");
+			$("#treeview_opcoes").append(equipe_li);
+		});
+		var add_li = $('<li><a href="#" id="add_team" data-toggle="modal" data-target="#modalAddTeam"><i class="fa fa-plus"></i> Adicionar Equipe</a></li>');
+		$("#treeview_opcoes").append(add_li);
+	});
+/*
+ * <li><a href="#" id_equipe="0"><i
+	class="fa fa-circle-o"></i> Bigode Grosso</a></li>
+
+	<li class="active"><a href="#" id_equipe="1"><i
+	class="fa fa-circle-o"></i> Calouros</a></li>
+
+
+ */	
+	
+/* 	$.ajax({
+		method: "POST",
+		url: "http://localhost:8080/ChampionsLinux/rest/hello/adicionar",
+		data:JSON.stringify({nome: conteudo, endereco: end}),
+		dataType: "json",
+		contentType: "application/json"
+	}).done(function(usuarios){
+		$("ul").empty();
+		$.each(usuarios, function(teste,usuario){
+			var li = $("<li>").text(usuario.nome+" "+usuario.endereco);
+			$("ul").append(li);
+		})
+	});
+ */});
+</script>
 
 	<script>
 		function teste(){			

@@ -1,0 +1,9 @@
+package champions.linux.services;
+
+public class Sumula {
+	
+	//ATRIBUTOS
+	private Time timeMandante;
+	private Time timeVisitante;
+	
+}

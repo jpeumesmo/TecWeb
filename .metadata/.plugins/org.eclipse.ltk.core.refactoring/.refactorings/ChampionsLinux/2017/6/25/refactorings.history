@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;champions.linux.services&apos; to &apos;champions.linux.services.entities&apos;&#x0A;- Original project: &apos;ChampionsLinux&apos;&#x0A;- Original element: &apos;ChampionsLinux/src/champions.linux.services&apos;&#x0A;- Renamed element: &apos;ChampionsLinux/src/champions.linux.services.entities&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;champions.linux.services&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;champions.linux.services" name="champions.linux.services.entities" qualified="false" references="true" stamp="1498056299113" textual="false" version="1.0"/>
+</session>

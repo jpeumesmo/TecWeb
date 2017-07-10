@@ -1,0 +1,3 @@
+adicionar jogador
+adicionar time
+adicionar sumula

@@ -351,11 +351,11 @@
 			<div class="modal-content modal-popup">
 				<a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
 				<h3 class="white">Login</h3>
-				<form action="" class="popup-form">
-					<input type="email" class="form-control form-white"
-						placeholder="Email"> <input type="password"
-						class="form-control form-white" placeholder="Senha">
-						<button type="submit" class="btn btn-submit"><a href="Administracao/index.html">Login</a></button>
+				<form class="popup-form" action="/ChampionsLinux/rest/login/logar" method="POST">
+					<input id="email_login" type="email" class="form-control form-white"
+						placeholder="Email" name="email"> <input id = password_login type="password"
+						class="form-control form-white" placeholder="Senha" name="password">
+						<button id="button_login" type="submit" class="btn btn-submit">Login</button>
 				</form>
 			</div>
 		</div>
@@ -375,6 +375,25 @@
 	<script src="js/typewriter.js"></script>
 	<script src="js/jquery.onepagenav.js"></script>
 	<script src="js/main.js"></script>
+
+	<script>
+	/*
+	$("#button_login").on("click",function(e){
+		var varEmail = $("#email_login").val();
+		var varPassword = $("#password_login").val();
+		console.log(varEmail);
+		console.log(varPassword);
+		$.ajax({
+			method: "PUT",
+			url: "http://localhost:8080/ChampionsLinux/rest/login/logar",
+			data:JSON.stringify({email: varEmail, password: varPassword}),
+			dataType: "json",
+			contentType: "application/json"
+		})
+	}); */
+	</script>
 </body>
 
 </html>
+
+

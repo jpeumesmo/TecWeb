@@ -1,0 +1,59 @@
+package champions.linux.services.entities;
+
+public class Jogador {
+
+	//ATRIBUTOS
+	private String nome;
+	private int numero;
+	private Gol gols;
+	private Falta faltas;
+	private CartaoAmarelo cartoesAmarelos;
+	private CartaoVermelho cartoesVermelho;
+	private boolean proximoJogo;
+	
+	//METODOS
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public int getNumero() {
+		return numero;
+	}
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+	public Gol getGols() {
+		return gols;
+	}
+	public void setGols(Gol gols) {
+		this.gols = gols;
+	}
+	public Falta getFaltas() {
+		return faltas;
+	}
+	public void setFaltas(Falta faltas) {
+		this.faltas = faltas;
+	}
+	public CartaoAmarelo getCartoesAmarelos() {
+		return cartoesAmarelos;
+	}
+	public void setCartoesAmarelos(CartaoAmarelo cartoesAmarelos) {
+		this.cartoesAmarelos = cartoesAmarelos;
+	}
+	public CartaoVermelho getCartoesVermelho() {
+		return cartoesVermelho;
+	}
+	public void setCartoesVermelho(CartaoVermelho cartoesVermelho) {
+		this.cartoesVermelho = cartoesVermelho;
+	}
+	public boolean isProximoJogo() {
+		return proximoJogo;
+	}
+	public void setProximoJogo(boolean proximoJogo) {
+		this.proximoJogo = proximoJogo;
+	}
+	
+	
+}

@@ -16,7 +16,7 @@
         <init-param>
             <param-name>jersey.config.server.provider.packages</param-name>
             <param-value>
-                br.edu.ufsj.ccomp.tecweb.services
+                champions.linux.services
             </param-value>
         </init-param>
         <init-param>

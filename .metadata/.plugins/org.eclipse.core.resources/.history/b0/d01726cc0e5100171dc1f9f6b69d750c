@@ -1,0 +1,26 @@
+package champions.linux.services;
+
+public class Faltas {
+
+	//ATRIBUTOS
+	private Jogador jogador;
+	private int quantidade;
+
+	//METODOS
+	public int getQuantidade() {
+		return quantidade;
+	}
+
+	public void setQuantidade(int quantidade) {
+		this.quantidade = quantidade;
+	}
+
+	public Jogador getJogador() {
+		return jogador;
+	}
+
+	public void setJogador(Jogador jogador) {
+		this.jogador = jogador;
+	}
+
+}

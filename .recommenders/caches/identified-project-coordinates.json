@@ -1,1 +1,1 @@
-[[{"location":"/home/jpeumesmo/UFSJ/TecWeb/ChampionsLinux/WebContent/WEB-INF/lib/javax.ws.rs-api-2.0.1.jar","type":"JAR","hints":{}},"javax.ws.rs:javax.ws.rs-api:2.0.1"]]
+[[{"location":"/home/jpeumesmo/UFSJ/TecWeb/ChampionsLinux","type":"PROJECT","hints":{"PROJECT_NAME":"ChampionsLinux"}},"ABSENT"],[{"location":"/usr/lib/jvm/java-8-openjdk-amd64","type":"JRE","hints":{"EXECUTION_ENVIRONMENT":"JavaSE-1.8"}},"jre:jre:1.8.0"]]
