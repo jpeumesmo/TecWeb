@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import champions.linux.services.entities.Administrador;
+import champions.linux.services.entities.Jogador;
 import champions.linux.services.entities.Jogo;
 import champions.linux.services.entities.Mensagem;
 import champions.linux.services.entities.Time;
@@ -28,6 +29,15 @@ public class BD {
 		this.tbEquipes.add(new Time("Calouros",2));
 		this.tbEquipes.add(new Time("Hora Extra",3));
 		this.tbEquipes.add(new Time("Vice da Gama",4));
+		
+		//JOGADORES
+		ArrayList<Jogador> jogadores = new ArrayList<>();
+		jogadores.add(new Jogador("Elder", 5));
+		jogadores.add(new Jogador("Douglas", 6));
+		jogadores.add(new Jogador("Madeira",1));
+		jogadores.add(new Jogador("Edmilson",10));
+		jogadores.add(new Jogador("Marcos",8));
+		this.tbEquipes.get(0).setJogadores(jogadores);;
 	}
 	
 	public static BD instance() {

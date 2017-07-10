@@ -12,6 +12,13 @@ public class Jogador {
 	private boolean proximoJogo;
 	
 	//METODOS
+	public Jogador(){
+		
+	}
+	public Jogador(String nome, int numero){
+		this.nome = nome;
+		this.numero = numero;
+	}
 	public String getNome() {
 		return nome;
 	}
