@@ -5,7 +5,7 @@ import java.util.Date;
 public class Jogo {
 
 	//ATRIBUTOS
-	private Time timeMandandte;
+	private Time timeMandandte;	
 	private Time timeVisitante;
 	private Sumula sumula;
 	private String informacao;
@@ -13,6 +13,9 @@ public class Jogo {
 	private Date dataTermino;
 
 	//METODOS
+	public Jogo(){
+		
+	}
 	public Time getTimeMandandte() {
 		return timeMandandte;
 	}

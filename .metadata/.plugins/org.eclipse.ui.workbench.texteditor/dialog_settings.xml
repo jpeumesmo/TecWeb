@@ -2,29 +2,30 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="add_player" key="selection"/>
+		<item value="jogos/listar" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="add_player"/>
-			<item value="Jogadores"/>
-			<item value="JogadoresA"/>
-			<item value="btn_teste"/>
-			<item value="Bigode Grosso"/>
-			<item value="Bem-Vindo"/>
-			<item value="João Pedro"/>
-			<item value="login"/>
+			<item value="jogos/listar"/>
+			<item value="jogos/adiciona"/>
+			<item value="modalAddGame"/>
+			<item value="jogos_box"/>
+			<item value="adiciona"/>
+			<item value="equipes/jogadores"/>
+			<item value="listar"/>
+			<item value="jogadores"/>
 		</list>
 		<list key="replacehistory">
+			<item value="i class"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="328" key="DIALOG_WIDTH"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 		<item value="403" key="DIALOG_HEIGHT"/>
-		<item value="17" key="DIALOG_X_ORIGIN"/>
-		<item value="205" key="DIALOG_Y_ORIGIN"/>
+		<item value="125" key="DIALOG_X_ORIGIN"/>
+		<item value="312" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

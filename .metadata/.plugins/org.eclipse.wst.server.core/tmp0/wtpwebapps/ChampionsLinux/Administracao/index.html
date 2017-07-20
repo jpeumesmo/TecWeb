@@ -252,73 +252,10 @@
 
 								<h3 class="box-title">Jogos</h3>
 
-								<div class="box-tools pull-right">
-									<ul class="pagination pagination-sm inline">
-										<li><a href="#">&laquo;</a></li>
-										<li><a href="#">1</a></li>
-										<li><a href="#">2</a></li>
-										<li><a href="#">3</a></li>
-										<li><a href="#">&raquo;</a></li>
-									</ul>
-								</div>
 							</div>
 							<!-- /.box-header -->
 							<div class="box-body">
-								<ul class="todo-list">
-									<li>
-										<!-- drag handle --> <span class="handle"> <i
-											class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i>
-									</span> <!-- checkbox --> <input type="checkbox" value=""> <!-- todo text -->
-										<span class="text">Design a nice theme</span> <!-- Emphasis label -->
-										<small class="label label-danger"><i
-											class="fa fa-clock-o"></i> 2 mins</small> <!-- General tools such as edit or delete-->
-										<div class="tools">
-											<i class="fa fa-edit" href="#" id="add_game"
-												data-toggle="modal" data-target="#modalChangeGame"></i> <i
-												class="fa fa-trash-o"></i>
-										</div>
-									</li>
-									<li><span class="handle"> <i
-											class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i>
-									</span> <input type="checkbox" value=""> <span class="text">Make
-											the theme responsive</span> <small class="label label-info"><i
-											class="fa fa-clock-o"></i> 4 hours</small>
-										<div class="tools">
-											<i class="fa fa-edit"></i> <i class="fa fa-trash-o"></i>
-										</div></li>
-									<li><span class="handle"> <i
-											class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i>
-									</span> <input type="checkbox" value=""> <span class="text">Let
-											theme shine like a star</span> <small class="label label-warning"><i
-											class="fa fa-clock-o"></i> 1 day</small>
-										<div class="tools">
-											<i class="fa fa-edit"></i> <i class="fa fa-trash-o"></i>
-										</div></li>
-									<li><span class="handle"> <i
-											class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i>
-									</span> <input type="checkbox" value=""> <span class="text">Let
-											theme shine like a star</span> <small class="label label-success"><i
-											class="fa fa-clock-o"></i> 3 days</small>
-										<div class="tools">
-											<i class="fa fa-edit"></i> <i class="fa fa-trash-o"></i>
-										</div></li>
-									<li><span class="handle"> <i
-											class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i>
-									</span> <input type="checkbox" value=""> <span class="text">Check
-											your messages and notifications</span> <small
-										class="label label-primary"><i class="fa fa-clock-o"></i>
-											1 week</small>
-										<div class="tools">
-											<i class="fa fa-edit"></i> <i class="fa fa-trash-o"></i>
-										</div></li>
-									<li><span class="handle"> <i
-											class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i>
-									</span> <input type="checkbox" value=""> <span class="text">Let
-											theme shine like a star</span> <small class="label label-default"><i
-											class="fa fa-clock-o"></i> 1 month</small>
-										<div class="tools">
-											<i class="fa fa-edit"></i> <i class="fa fa-trash-o"></i>
-										</div></li>
+								<ul class="todo-list" id="jogos_box">
 								</ul>
 							</div>
 							<!-- /.box-body -->
@@ -452,8 +389,9 @@
 						</div>
 
 						<!-- /.box (chat box) -->
-						<div class="box-body" id= "jogadores_box">
-						
+						<div class="box-body">
+							<ul class="todo-list" id="jogadores_box">
+							</ul>
 						</div>
 						<!-- /.box-body -->
 						<div class="box-footer clearfix no-border">
@@ -485,14 +423,15 @@
 						<div class="modal-body">
 							<input id="nome_jogador_input" class="form-control form-white"
 								placeholder="Nome do jogador"> <br> <input
-								id = "numero_jogador_input" type="number" min="0" max="99" class="form-control form-white"
+								id="numero_jogador_input" type="number" min="0" max="99"
+								class="form-control form-white"
 								placeholder="Numero da camisa do jogador">
 
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-default"
 								data-dismiss="modal">Cancelar</button>
-							<button id="btn_add_player"type="button" class="btn btn-primary">Salvar</button>
+							<button id="btn_add_player" type="button" class="btn btn-primary" data-dismiss="modal">Salvar</button>
 						</div>
 					</div>
 				</div>
@@ -525,8 +464,8 @@
 											<option value="calouros">Calouros</option>
 											<option value="cutuca">Cutuca Pomba</option>
 											<option value="hora_extra">Hora Extra</option>
-										</select> <br> <a>Vs</a> <br> <label for="sel1"></label> <select
-											class="form-control" id="sel1">
+										</select> <br> <a>Vs</a> <br> <label for="sel2"></label> <select
+											class="form-control" id="sel2">
 											<option value="null">Escolha o segundo time</option>
 											<option value="bigode">Bigode Grosso</option>
 											<option value="calouros">Calouros</option>
@@ -880,20 +819,20 @@
 								aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 							</button>
-							<h4 class="modal-title" id="myModalLabel">Adicionar Time</h4>
+							<h4 class="modal-title" id="myModalLabel">Adicionar Jogo</h4>
 						</div>
 						<div class="modal-body">
 							<form>
 								<div class="form-group">
 									<label for="sel1"></label> <select class="form-control"
-										id="sel1">
+										id="sele1">
 										<option value="null">Escolha o primeiro time</option>
 										<option value="bigode">Bigode Grosso</option>
 										<option value="calouros">Calouros</option>
 										<option value="cutuca">Cutuca Pomba</option>
 										<option value="hora_extra">Hora Extra</option>
-									</select> <br> <a>Vs</a> <br> <label for="sel1"></label> <select
-										class="form-control" id="sel1">
+									</select> <br> <a>Vs</a> <br> <label for="sel2"></label> <select
+										class="form-control" id="sele2">
 										<option value="null">Escolha o segundo time</option>
 										<option value="bigode">Bigode Grosso</option>
 										<option value="calouros">Calouros</option>
@@ -906,7 +845,8 @@
 						<div class="modal-footer">
 							<button type="button" class="btn btn-default"
 								data-dismiss="modal">Cancelar</button>
-							<button type="button" class="btn btn-primary">Salvar</button>
+							<button id="btn_add_jogo" type="button" class="btn btn-primary"
+								data-dismiss="modal">Salvar</button>
 						</div>
 					</div>
 				</div>
@@ -1107,307 +1047,595 @@
 
 
 	<script>
-										
-		$(document).ready(function() {
-			$("#control").show();
-			$("#jogos").hide();
-			$("#equipes").hide();
+		$(document)
+				.ready(
+						function() {
+							$("#control").show();
+							$("#jogos").hide();
+							$("#equipes").hide();
 
-			$("#menu_jogos").on("click", function(e) {
-				$("#control").hide();
-				$("#jogos").show();
-				$("#equipes").hide();
-			});
-			$("#menu_control").on("click", function(e) {
-				$("#control").show();
-				$("#jogos").hide();
-				$("#equipes").hide();
-			});
-			
-//			('[id^="menu_equipes"]')
-			$("#treeview_opcoes").on("click", "a[id_equipes]", function(e) {
-				$("#control").hide();
-				$("#jogos").hide();
-				$("#equipes").show();
-				
-				var id_equipe = $(this).attr("id_equipes");
-				
-				$.ajax({
-					method: "GET",
-					url: "http://localhost:8080/ChampionsLinux/rest/equipes/jogadores/"+id_equipe,
-					dataType: "json",
-					contentType: "application/json"
-				}).done(function(jogadores){
-				//	<li><a href="#" id_equipe="0"><i
+							$("#menu_jogos")
+									.on(
+											"click",
+											function(e) {
+												$("#control").hide();
+												$("#jogos").show();
+												$("#equipes").hide();
+
+												$
+														.ajax({
+															method : "GET",
+															url : "http://localhost:8080/ChampionsLinux/rest/jogos/listar",
+															dataType : "json",
+															contentType : "application/json",
+
+															success : function(
+																	jogos) {
+																//$("#jogos_box").empty();
+																//	var ul = $("<ul class='todo-list'>"");
+																$("#jogos_box")
+																		.append(
+																				ul);
+																$
+																		.each(
+																				jogos,
+																				function(
+																						idx,
+																						jogo) {
+																					var jogo = jogo.timeMandandte.nome
+																							+ " VS "
+																							+ jogo.timeVisitante.nome;
+																					//			var jogo_li = $("<li>").text(jogo.timeMandandte.nome+" VS "+jogo.timeVisitante.nome);
+																					//											var jogo_li = $("<li><span class="+"'handle'"+"> <i class="+"'fa fa-ellipsis-v'"+"></i> <i class="+"'fa fa-ellipsis-v'"+"></i></span>"+" <span class="+"'text'"+">"+jogo.timeMandandte.nome+"</span><span class="+"'text'"+"> VS </span><span class="+"'text'"+">"+jogo.timeVisitante.nome+"</span><div class="+"'tools'"+"><i class="+"'fa fa-edit'" +"href="+"'#''" +"id="+"'add_game'"+" data-toggle="+"'modal'"+" data-target="+"'#modalChangeGame'"+"></i> </div></li>");
+																					//											console.log(jogo.timeVisitante.nome);
+																					var jogo_li = $("<li><span class="+"'handle'"+"> <i class="+"'fa fa-ellipsis-v'"+"></i> <i class="+"'fa fa-ellipsis-v'"+"></i></span><span class="+"'text'>"
+																							+ jogo.timeMandandte.nome
+																							+ " VS "
+																							+ jogo.timeVisitante.nome
+																							+ "</span><div class="+"'tools'"+"><i class="+"'fa fa-edit'"+"></i></div></li>");
+																					//	var jogo_li = $("<li><span class="+"'handle'></span> <input type="+"'checkbox' value=''> <span class="+"'text'>"+jogo+"</span> <small class="+"'label label-info'><i class="+"'fa fa-clock-o'></i> 4 hours</small><div class="+"'tools'><i class="'fa fa-edit'+"> href='#'" +"id="+"'add_game'"+" data-toggle="+"'modal'"+" data-target="+"'#modalChangeGame'"+"></i></div></li>");
+																					$(
+																							"#jogos_box")
+																							.append(
+																									jogo_li);
+																				});
+																//var final_ul = $("</ul>");
+																//$("#jogos_box").append(final_ul);
+															},
+															error : function(
+																	errormessage) {
+																console
+																		.log("erro");
+															}
+
+														});
+											});
+							$("#menu_control").on("click", function(e) {
+								$("#control").show();
+								$("#jogos").hide();
+								$("#equipes").hide();
+							});
+
+							//			('[id^="menu_equipes"]')
+							$("#treeview_opcoes")
+									.on(
+											"click",
+											"a[id_equipes]",
+											function(e) {
+												$("#control").hide();
+												$("#jogos").hide();
+												$("#equipes").show();
+
+												var id_equipe = $(this).attr(
+														"id_equipes");
+
+												$
+														.ajax(
+																{
+																	method : "GET",
+																	url : "http://localhost:8080/ChampionsLinux/rest/equipes/jogadores/"
+																			+ id_equipe,
+																	dataType : "json",
+																	contentType : "application/json"
+																})
+														.done(
+																function(
+																		jogadores) {
+																	//	<li><a href="#" id_equipe="0"><i
 				//	class="fa fa-circle-o"></i> Bigode Grosso</a></li>
-					$("#jogadores_box").empty();
-					var ul = $('<ul class="todo-list">');
-					$("#jogadores_box").append(ul);
-					$.each(jogadores, function(idx, jogador){
-						var jogador_li = $("</li><li><span class="+"handle"+"> <i class="+"fa fa-user-o"+"></i> <i class="+"fa fa-user-o"+"></i></span> <span class="+"text"+">"+jogador.nome+"</span> <small class="+"label label-info"+"><iclass="+"fa fa-clock-o"+"></i>"+jogador.numero+"</small></li>");
-						$("#jogadores_box").append(jogador_li);
-					});
-					var final_ul = $("</ul>");
-					$("#jogadores_box").append(final_ul);
-				});
-				
+																	$(
+																			"#jogadores_box")
+																			.empty();
+							//										var ul = $('<ul class="todo-list">');
+												//					$(
+													//						"#jogadores_box")
+														//					.append(
+															//						ul);
+																	$
+																			.each(
+																					jogadores,
+																					function(
+																							idx,
+																							jogador) {
+																						var jogador_li = $("</li><li><span class="+"'handle'"+"> <i class="+"'fa fa-user'"+"></i> <i class="+"'fa fa-user-o'"+"></i></span> <span class="+"'text'"+">"
+																								+ jogador.nome
+																								+ "</span> <small class="+"'label label-info'"+"><i ></i>"
+																								+ "#"
+																								+ jogador.numero
+																								+ "</small></li>");
 
+																						$(
+																								"#jogadores_box")
+																								.append(
+																										jogador_li);
+																					});
+		//															var final_ul = $("</ul>");
+			//														$(
+				//															"#jogadores_box")
+					//														.append(
+						//															final_ul);
+																});
 
-			});
-			
-	/*		$("#menu_equipes_0").on("click", function(e) {
-				$("#control").hide();
-				$("#jogos").hide();
-				$("#equipes").show();
-			});
-			$("#menu_equipes_1").on("click", function(e) {
-				$("#control").hide();
-				$("#jogos").hide();
-				$("#equipes").show();
-			});
-			$("#menu_equipes_2").on("click", function(e) {
-				$("#control").hide();
-				$("#jogos").hide();
-				$("#equipes").show();
-			});
-			$("#menu_equipes_3").on("click", function(e) {
-				$("#control").hide();
-				$("#jogos").hide();
-				$("#equipes").show();
-			});
-		*/	
-			$("#add_team").on("click", function(e) {
-				$("#control").show();
-				$("#jogos").hide();
-				$("#equipes").hide();
-			});
+											});
 
-/*			$("#btn_sumula").on("click", function(e){
-				$("#modal_change_game").hide();
-				$("modal_sumula").show();
-				$("modal_sumula_1").hide();
-				
-			});
-			
-			$("#btn_sumula_1").on("click", function(e){
-				$("#modal_change_game").hide();
-				$("modal_sumula").hide();
-				$("modal_sumula_1").show();
+							/*		$("#menu_equipes_0").on("click", function(e) {
+										$("#control").hide();
+										$("#jogos").hide();
+										$("#equipes").show();
+									});
+									$("#menu_equipes_1").on("click", function(e) {
+										$("#control").hide();
+										$("#jogos").hide();
+										$("#equipes").show();
+									});
+									$("#menu_equipes_2").on("click", function(e) {
+										$("#control").hide();
+										$("#jogos").hide();
+										$("#equipes").show();
+									});
+									$("#menu_equipes_3").on("click", function(e) {
+										$("#control").hide();
+										$("#jogos").hide();
+										$("#equipes").show();
+									});
+							 */
+							$("#add_team").on("click", function(e) {
+								$("#control").show();
+								$("#jogos").hide();
+								$("#equipes").hide();
+							});
 
-			});		
-	
-			$("#btn_salve_change").on("click", function(e){
-				
-			});		
-	
-	*/		
-			//PARA MARCAR O VERMELHO AUTOMATICO
-			$('#sumula input').on('change', function() {
-   				//alert($('input[name=optradio]:checked', '#sumula').val());
-   				if ($('input:checked', '#sumula').val() == 2){
-   					$(":checkbox", $(this).parents("tr")).prop("checked", true);
-   				}
- 				
-   				//if ($('#chk').prop("checked", true)){
-   					//if($('input[name=optradio]:checked', '#sumula').val() == 1){
-   						//$("#chk").prop("checked",false);	
-   					//}
-   				//}
-			});
-			
-			$('#sumula_1 input').on('change', function() {
-			//alert($('input[name=optradio]:checked', '#sumula').val());
-			if ($('input:checked', '#sumula_1').val() == 2){
-				$(":checkbox", $(this).parents("tr")).prop("checked", true);
-			}
+							/*			$("#btn_sumula").on("click", function(e){
+							 $("#modal_change_game").hide();
+							 $("modal_sumula").show();
+							 $("modal_sumula_1").hide();
+							
+							 });
+							
+							 $("#btn_sumula_1").on("click", function(e){
+							 $("#modal_change_game").hide();
+							 $("modal_sumula").hide();
+							 $("modal_sumula_1").show();
 
-			});
-			//PARA ADICIONAR TIME NA TABELA LATERAL 
-			
-			$("#btn_add_team").click(function(){
-				 var branches = $('<li><a href="#" id_equipe=' +
-					$("#treeview_opcoes").children().length + '">' 
-					+' <i class="fa fa-circle-o"></i>'+ $("#name_new_team").val()+
-					'</a></li>').prependTo("#treeview_opcoes");
-			});
-			
+							 });		
+							
+							 $("#btn_salve_change").on("click", function(e){
+							
+							 });		
+							
+							 */
+							//PARA MARCAR O VERMELHO AUTOMATICO
+							$('#sumula input')
+									.on(
+											'change',
+											function() {
+												//alert($('input[name=optradio]:checked', '#sumula').val());
+												if ($('input:checked',
+														'#sumula').val() == 2) {
+													$(
+															":checkbox",
+															$(this).parents(
+																	"tr"))
+															.prop("checked",
+																	true);
+												}
 
-			$.ajax({
-				method: "GET",
-				url: "http://localhost:8080/ChampionsLinux/rest/equipes/listar",
-				data: JSON.stringify(),
-				dataType: "json",
-				contentType: "application/json"
-			}).done(function(equipes){
-			//	<li><a href="#" id_equipe="0"><i
+												//if ($('#chk').prop("checked", true)){
+												//if($('input[name=optradio]:checked', '#sumula').val() == 1){
+												//$("#chk").prop("checked",false);	
+												//}
+												//}
+											});
+
+							$('#sumula_1 input').on(
+									'change',
+									function() {
+										//alert($('input[name=optradio]:checked', '#sumula').val());
+										if ($('input:checked', '#sumula_1')
+												.val() == 2) {
+											$(":checkbox",
+													$(this).parents("tr"))
+													.prop("checked", true);
+										}
+
+									});
+							//PARA ADICIONAR TIME NA TABELA LATERAL 
+
+							$("#btn_add_team")
+									.click(
+											function() {
+												var branches = $(
+														'<li><a href="#" id_equipe='
+																+ $(
+																		"#treeview_opcoes")
+																		.children().length
+																+ '">'
+																+ ' <i class="fa fa-circle-o"></i>'
+																+ $(
+																		"#name_new_team")
+																		.val()
+																+ '</a></li>')
+														.prependTo(
+																"#treeview_opcoes");
+											});
+
+							$
+									.ajax(
+											{
+												method : "GET",
+												url : "http://localhost:8080/ChampionsLinux/rest/equipes/listar",
+												data : JSON.stringify(),
+												dataType : "json",
+												contentType : "application/json"
+											})
+									.done(
+											function(equipes) {
+												//	<li><a href="#" id_equipe="0"><i
 			//	class="fa fa-circle-o"></i> Bigode Grosso</a></li>
-				$("#treeview_opcoes").empty();
-				$.each(equipes, function(idx, equipe){
-					var equipe_li = $('<li><a href='+'#'+' id_equipes='+equipe.id+'><i class="fa fa-circle-o"></i>' + equipe.nome + "</a></li>");
-					$("#treeview_opcoes").append(equipe_li);
-				});
-				var add_li = $('<li><a href="#" id="add_team" data-toggle="modal" data-target="#modalAddTeam"><i class="fa fa-plus"></i> Adicionar Equipe</a></li>');
-				$("#treeview_opcoes").append(add_li);
-			});
+												$("#treeview_opcoes").empty();
+												$
+														.each(
+																equipes,
+																function(idx,
+																		equipe) {
+																	var equipe_li = $('<li><a href='+'#'+' id_equipes='+equipe.id+'><i class="fa fa-circle-o"></i>'
+																			+ equipe.nome
+																			+ "</a></li>");
+																	$(
+																			"#treeview_opcoes")
+																			.append(
+																					equipe_li);
+																});
+												var add_li = $('<li><a href="#" id="add_team" data-toggle="modal" data-target="#modalAddTeam"><i class="fa fa-plus"></i> Adicionar Equipe</a></li>');
+												$("#treeview_opcoes").append(
+														add_li);
+											});
 
-		});
-		
-		
+						});
 	</script>
-	
 	<script>
-	$("#btn_add_player").on("click",function(){
-		var nomeJogador = $("#nome_jogador_input").val();
-		var numeroJogador = $("#numero_jogador_input").val();
-		
-		
-		$.ajax({
-			method: "POST",
-			url: "http://localhost:8080/ChampionsLinux/rest/equipes/adiciona_jogador/"+"1",
-			data: JSON.stringify({nome: nomeJogador,numero: numeroJogador}),
-			dataType: "json",
-			contentType: "application/json",
-			success: function (jogadores) {				
-				$("#jogadores_box").empty();
-				var ul = $('<ul class="todo-list">');
-				$("#jogadores_box").append(ul);
-				$.each(jogadores, function(idx, jogador){
-					var jogador_li = $("</li><li><span class="+"handle"+"> <i class="+"fa fa-user-o"+"></i> <i class="+"fa fa-user-o"+"></i></span> <span class="+"text"+">"+jogador.nome+"</span> <small class="+"label label-info"+"><iclass="+"fa fa-clock-o"+"></i>"+jogador.numero+"</small></li>");
-					$("#jogadores_box").append(jogador_li);
-				});
-				var final_ul = $("</ul>");
-				$("#jogadores_box").append(final_ul);
+		$("#btn_add_jogo")
+				.on(
+						"click",
+						function() {
+							var equipe1 = $("#sele1").val();
+							var aux = equipe1.split("/");
+							var id_equipe1 = aux[0];
+							var nome_equipe1 = aux[1];
+							var equipe2 = $("#sele2").val();
+							var aux = equipe2.split("/");
+							var id_equipe2 = aux[0];
+							var nome_equipe2 = aux[1];
+							//console.log(id_equipe1,nome_equipe1);
+							//console.log(id_equipe2,nome_equipe2);
 
-			},
-			error: function (errormessage) {
-				console.log("erro");
-			}
-			})
-	});
+							$
+									.ajax({
+										method : "POST",
+										url : "http://localhost:8080/ChampionsLinux/rest/jogos/adicionar",
+										data : JSON.stringify({
+											timeMandandte : {
+												nome : nome_equipe1
+											},
+											timeVisitante : {
+												nome : nome_equipe2
+											}
+										}),
+										dataType : "json",
+										contentType : "application/json",
+										success : function(jogos) {
+											$("#jogos_box").empty();
+											var ul = $('<ul class="todo-list">');
+										//	$("#jogos_box").append(ul);
+											$
+													.each(
+															jogos,
+															function(idx, jogo) {
 
-</script>
-	
+																//			var jogo_li = $("<li>").text(jogo.timeMandandte.nome+" VS "+jogo.timeVisitante.nome);
+																var jogo_li = $("<li><span class="+"'handle'"+"> <i class="+"'fa fa-ellipsis-v'"+"></i> <i class="+"'fa fa-ellipsis-v'"+"></i></span>"
+																		+ " <span class="+"'text'"+">"
+																		+ jogo.timeMandandte.nome
+																		+ "</span><span class="+"'text'"+"> VS </span><span class="+"'text'"+">"
+																		+ jogo.timeVisitante.nome
+																		+ "</span><div class="+"'tools'"+"><i class="+"'fa fa-edit'" +"href="+"'#''" +"id="+"'add_game'"+" data-toggle="+"'modal'"+" data-target="+"'#modalChangeGame'"+"></i> </div></li>");
+																$("#jogos_box")
+																		.append(
+																				jogo_li);
+															});
+											var final_ul = $("</ul>");
+									//		$("#jogos_box").append(final_ul);
+										},
+										error : function(errormessage) {
+											console.log("erro");
+										}
+
+									});
+
+						});
+	</script>
+
+
 	<script>
-	$("#btn_add_team").on("click",function(){
-		var nomeTime = $("#name_new_team").val();
-		var size = $("#treeview_opcoes").children().size();
-		$.ajax({
-			method: "POST",
-			url: "http://localhost:8080/ChampionsLinux/rest/equipes/adicionar",
-			data: JSON.stringify({nome: nomeTime,id: size}),
-			dataType: "json",
-			contentType: "application/json",
-			success: function (equipes) {
-				$("#treeview_opcoes").empty();
-				$.each(equipes, function(idx, equipe){
-					var equipe_li = $('<li><a href='+'#'+' id_equipes='+equipe.id+'><i class="fa fa-circle-o"></i>' + equipe.nome + "</a></li>");
-					$("#treeview_opcoes").append(equipe_li);
-				});
-				var add_li = $('<li><a href="#" id="add_team" data-toggle="modal" data-target="#modalAddTeam"><i class="fa fa-plus"></i> Adicionar Equipe</a></li>');
-				$("#treeview_opcoes").append(add_li);
-		    },
-			error: function (errormessage) {
-				console.log("erro");
-			}
-		})
-	});
-</script>
+		$("#btn_add_player")
+				.on(
+						"click",
+						function() {
+							var nomeJogador = $("#nome_jogador_input").val();
+							var numeroJogador = $("#numero_jogador_input")
+									.val();
+
+							$
+									.ajax({
+										method : "POST",
+										url : "http://localhost:8080/ChampionsLinux/rest/equipes/adiciona_jogador/"
+												+ "1",
+										data : JSON.stringify({
+											nome : nomeJogador,
+											numero : numeroJogador
+										}),
+										dataType : "json",
+										contentType : "application/json",
+										success : function(jogadores) {
+											$("#jogadores_box").empty();
+										//	var ul = $('<ul class="todo-list">');
+										//	$("#jogadores_box").append(ul);
+											$
+													.each(
+															jogadores,
+															function(idx,
+																	jogador) {
+																var jogador_li = $("</li><li><span class="+"'handle'"+"> <i class="+"'fa fa-user'"+"></i> <i class="+"'fa fa-user-o'"+"></i></span> <span class="+"'text'"+">"
+																		+ jogador.nome
+																		+ "</span> <small class="+"'label label-info'"+"><i ></i>"
+																		+ "#"+jogador.numero
+																		+ "</small></li>");
+																$(
+																		"#jogadores_box")
+																		.append(
+																				jogador_li);
+															});
+											var final_ul = $("</ul>");
+											//$("#jogadores_box")
+												//	.append(final_ul);
+
+										},
+										error : function(errormessage) {
+											console.log("erro");
+										}
+									})
+						});
+	</script>
 
 	<script>
-$("#btn_teste").on("click",function(){
-	
-	$.ajax({
-		method: "GET",
-		url: "http://localhost:8080/ChampionsLinux/rest/equipes/jogadores",
-		data: JSON.stringify(),
-		dataType: "json",
-		contentType: "application/json"
-	}).done(function(jogadores){
-	//	<li><a href="#" id_equipe="0"><i
+		$("#add_game")
+				.on(
+						"click",
+						function() {
+							$
+									.ajax(
+											{
+												method : "GET",
+												url : "http://localhost:8080/ChampionsLinux/rest/equipes/listar",
+												data : JSON.stringify(),
+												dataType : "json",
+												contentType : "application/json"
+											})
+									.done(
+											function(equipes) {
+												$("#sele1").empty();
+												$("#sele2").empty();
+												var escolha = $("<option value="+"null"+">Escolha o primeiro time</option>");
+												$("#sele1").append(escolha);
+												escolha = $("<option value="+"null"+">Escolha o segundo time</option>");
+												$("#sele2").append(escolha);
+												$
+														.each(
+																equipes,
+																function(idx,
+																		equipe) {
+																	var equipe_html = $("<option value="+equipe.id+"/"+equipe.nome+">"
+																			+ equipe.nome
+																			+ "</option>");
+																	var equipe1_html = $("<option value="+equipe.id+"/"+equipe.nome+">"
+																			+ equipe.nome
+																			+ "</option>");
+																	$("#sele1")
+																			.append(
+																					equipe1_html);
+																	$("#sele1")
+																			.append(
+																					$("</select>"));
+
+																	$("#sele2")
+																			.append(
+																					equipe_html);
+																	$("#sele2")
+																			.append(
+																					$("</select>"));
+																});
+
+											});
+						});
+	</script>
+
+
+	<script>
+		$("#btn_add_team")
+				.on(
+						"click",
+						function() {
+							var nomeTime = $("#name_new_team").val();
+							var size = $("#treeview_opcoes").children().size();
+							$
+									.ajax({
+										method : "POST",
+										url : "http://localhost:8080/ChampionsLinux/rest/equipes/adicionar",
+										data : JSON.stringify({
+											nome : nomeTime,
+											id : size
+										}),
+										dataType : "json",
+										contentType : "application/json",
+										success : function(equipes) {
+											$("#treeview_opcoes").empty();
+											$
+													.each(
+															equipes,
+															function(idx,
+																	equipe) {
+																var equipe_li = $('<li><a href='+'#'+' id_equipes='+equipe.id+'><i class="fa fa-circle-o"></i>'
+																		+ equipe.nome
+																		+ "</a></li>");
+																$(
+																		"#treeview_opcoes")
+																		.append(
+																				equipe_li);
+															});
+											var add_li = $('<li><a href="#" id="add_team" data-toggle="modal" data-target="#modalAddTeam"><i class="fa fa-plus"></i> Adicionar Equipe</a></li>');
+											$("#treeview_opcoes")
+													.append(add_li);
+										},
+										error : function(errormessage) {
+											console.log("erro");
+										}
+									})
+						});
+	</script>
+
+	<script>
+		$("#btn_teste")
+				.on(
+						"click",
+						function() {
+
+							$
+									.ajax(
+											{
+												method : "GET",
+												url : "http://localhost:8080/ChampionsLinux/rest/equipes/jogadores",
+												data : JSON.stringify(),
+												dataType : "json",
+												contentType : "application/json"
+											})
+									.done(
+											function(jogadores) {
+												//	<li><a href="#" id_equipe="0"><i
 	//	class="fa fa-circle-o"></i> Bigode Grosso</a></li>
-		$("#jogadores_box").empty();
-		var ul = $('<ul class="todo-list">');
-		$("#jogadores_box").append(ul);
-		$.each(jogadores, function(idx, jogador){
-			var jogador_li = $("</li><li><span class="+"handle"+"> <i class="+"fa fa-user-o"+"></i> <i class="+"fa fa-user-o"+"></i></span> <span class="+"text"+">"+jogador.nome+"</span> <small class="+"label label-info"+"><iclass="+"fa fa-clock-o"+"></i>"+jogador.numero+"</small></li>");
-			$("#jogadores_box").append(jogador_li);
-		});
-		var final_ul = $("</ul>");
-		$("#jogadores_box").append(final_ul);
-	});
-	
-	/*
-	</li>
-								<li><span class="handle"> <i
+												$("#jogadores_box").empty();
+												var ul = $('<ul class="todo-list">');
+												$("#jogadores_box").append(ul);
+												$
+														.each(
+																jogadores,
+																function(idx,
+																		jogador) {
+																	var jogador_li = $("</li><li><span class="+"'handle'"+"> <i class="+"'fa fa-user-o'"+"></i> <i class="+"'fa fa-user-o'"+"></i></span> <span class="+"'text'"+">"
+																			+ jogador.nome
+																			+ "</span> <small class="+"'label label-info'"+"><i class="+"'fa fa-trophy'"+"></i>"
+																			+ jogador.numero
+																			+ "</small></li>");
+
+																	$(
+																			"#jogadores_box")
+																			.append(
+																					jogador_li);
+																});
+												var final_ul = $("</ul>");
+												$("#jogadores_box").append(
+														final_ul);
+											});
+
+							/*
+							</li>
+														<li><span class="handle"> <i
 										class="fa fa-user-o"></i> <i class="fa fa-user-o"></i>
-								</span> <input type="checkbox" value=""> <span class="text">Make
-										the theme responsive</span> <small class="label label-info"><i
+														</span> <input type="checkbox" value=""> <span class="text">Make
+																the theme responsive</span> <small class="label label-info"><i
 										class="fa fa-clock-o"></i> 4 hours</small>
-									<div class="tools">
-										<i class="fa fa-edit"></i> <i class="fa fa-trash-o"></i>
-									</div></li>
-	*/
-	/*
-	$.ajax({
-		method: "GET",
-		url: "http://localhost:8080/ChampionsLinux/rest/equipes/listar",
-		data: JSON.stringify(),
-		dataType: "json",
-		contentType: "application/json"
-	}).done(function(equipes){
-	//	<li><a href="#" id_equipe="0"><i
+															<div class="tools">
+																<i class="fa fa-edit"></i> <i class="fa fa-trash-o"></i>
+															</div></li>
+							 */
+							/*
+							$.ajax({
+								method: "GET",
+								url: "http://localhost:8080/ChampionsLinux/rest/equipes/listar",
+								data: JSON.stringify(),
+								dataType: "json",
+								contentType: "application/json"
+							}).done(function(equipes){
+							//	<li><a href="#" id_equipe="0"><i
 	//	class="fa fa-circle-o"></i> Bigode Grosso</a></li>
-		$("#treeview_opcoes").empty();
-		$.each(equipes, function(idx, equipe){
-			var equipe_li = $('<li><a href='+'#'+' id_equipes='+equipe.id+'><i class="fa fa-circle-o"></i>' + equipe.nome + "</a></li>");
-			$("#treeview_opcoes").append(equipe_li);
-		});
-		var add_li = $('<li><a href="#" id="add_team" data-toggle="modal" data-target="#modalAddTeam"><i class="fa fa-plus"></i> Adicionar Equipe</a></li>');
-		$("#treeview_opcoes").append(add_li);
-	});
-/*
- * <li><a href="#" id_equipe="0"><i
+								$("#treeview_opcoes").empty();
+								$.each(equipes, function(idx, equipe){
+									var equipe_li = $('<li><a href='+'#'+' id_equipes='+equipe.id+'><i class="fa fa-circle-o"></i>' + equipe.nome + "</a></li>");
+									$("#treeview_opcoes").append(equipe_li);
+								});
+								var add_li = $('<li><a href="#" id="add_team" data-toggle="modal" data-target="#modalAddTeam"><i class="fa fa-plus"></i> Adicionar Equipe</a></li>');
+								$("#treeview_opcoes").append(add_li);
+							});
+							/*
+							 * <li><a href="#" id_equipe="0"><i
 	class="fa fa-circle-o"></i> Bigode Grosso</a></li>
 
-	<li class="active"><a href="#" id_equipe="1"><i
+							<li class="active"><a href="#" id_equipe="1"><i
 	class="fa fa-circle-o"></i> Calouros</a></li>
 
 
- */	
-	
-/* 	$.ajax({
-		method: "POST",
-		url: "http://localhost:8080/ChampionsLinux/rest/hello/adicionar",
-		data:JSON.stringify({nome: conteudo, endereco: end}),
-		dataType: "json",
-		contentType: "application/json"
-	}).done(function(usuarios){
-		$("ul").empty();
-		$.each(usuarios, function(teste,usuario){
-			var li = $("<li>").text(usuario.nome+" "+usuario.endereco);
-			$("ul").append(li);
-		})
-	});
- */});
-</script>
+							 */
+
+							/* 	$.ajax({
+							 method: "POST",
+							 url: "http://localhost:8080/ChampionsLinux/rest/hello/adicionar",
+							 data:JSON.stringify({nome: conteudo, endereco: end}),
+							 dataType: "json",
+							 contentType: "application/json"
+							 }).done(function(usuarios){
+							 $("ul").empty();
+							 $.each(usuarios, function(teste,usuario){
+							 var li = $("<li>").text(usuario.nome+" "+usuario.endereco);
+							 $("ul").append(li);
+							 })
+							 });
+							 */});
+	</script>
 
 	<script>
-		function teste(){			
+		function teste() {
 			$('[id^="menu_equipes"]').on("click", function(e) {
 				$("#control").hide();
 				$("#jogos").hide();
 				$("#equipes").show();
 			});
 		}
-
 	</script>
 
 
 	<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 	<script>
-											$.widget.bridge('uibutton',
-													$.ui.button);
-										</script>
+		$.widget.bridge('uibutton', $.ui.button);
+	</script>
 	<!-- Bootstrap 3.3.6 -->
 	<script src="bootstrap/js/bootstrap.min.js"></script>
 	<!-- Morris.js charts -->

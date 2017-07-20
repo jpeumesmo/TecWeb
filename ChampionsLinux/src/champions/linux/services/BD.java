@@ -12,7 +12,7 @@ import champions.linux.services.entities.Usuario;
 
 public class BD {
 	
-	public List<Jogo> TBJOGOS;
+	public List<Jogo> TBJOGOS = new ArrayList<>();
 	public List<Mensagem> TBMENSAGENS;
 	public List<Time> tbEquipes = new ArrayList<>();
 	private List<Usuario> tbUsuario = new ArrayList<>();
@@ -37,7 +37,7 @@ public class BD {
 		jogadores.add(new Jogador("Madeira",1));
 		jogadores.add(new Jogador("Edmilson",10));
 		jogadores.add(new Jogador("Marcos",8));
-		this.tbEquipes.get(0).setJogadores(jogadores);;
+		this.tbEquipes.get(0).setJogadores(jogadores);
 	}
 	
 	public static BD instance() {
@@ -51,6 +51,10 @@ public class BD {
 	
 	public List<Usuario> usuarios() {
 		return this.tbUsuario;
+	}
+	
+	public void addJogo(Jogo j){
+		this.TBJOGOS.add(j);
 	}
 	
 	public void addTime(Time t){

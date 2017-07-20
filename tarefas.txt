@@ -1,3 +1,4 @@
-adicionar jogador
-adicionar time
-adicionar sumula
+adicionar jogador - preciso pegar o id_equipe no document.ready
+adicionar time - funcinal
+adicionar jogo - ja lista certo
+adicionar sumula - 
